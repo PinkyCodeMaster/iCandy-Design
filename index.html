@@ -1,37 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Developer Trial</title>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
     <link href="./src/styles/output.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .heading {
+            font-family: 'Oswald', sans-serif;
+        }
+
+        .line {
+            width: 50px;
+            height: 4px;
+            background-color: #F6B600;
+        }
+    </style>
 </head>
 
-<body class="bg-white text-gray-900">
-    <header class="text-center p-6">
-        <img src="path/to/logo.svg" alt="Logo" class="mx-auto">
-    </header>
-    <main class="container mx-auto px-4">
-        <section class="text-center my-8">
-            <h1 class="heading text-4xl">HEADING</h1>
+<body class="bg-black text-gray-900">
+    <!-- Navbar -->
+    <nav class="bg-white text-black p-4 md:px-8">
+        <div class="flex justify-between items-center md:py-2">
+            <img src="./src/images/logo.svg" alt="Logo" class="w-16 h-16">
+            <div class="block lg:hidden">
+                <button class="text-black focus:outline-none" id="menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <ul class="hidden lg:flex gap-8" id="nav-links">
+                <li>
+                    <a href="#work" class="flex text-lg font-semibold">Our Work
+                        <span class="pl-2">
+                            <svg fill="#F6B600" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                                viewBox="0 0 451.847 451.847" xml:space="preserve">
+                                <g>
+                                    <path
+                                        d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+                       c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
+                       c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+                                </g>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" class="text-lg font-semibold">About</a>
+                </li>
+                <li>
+                    <a href="#news" class="text-lg font-semibold">News</a>
+                </li>
+                <li>
+                    <a href="#teams" class="text-lg font-semibold">Team</a>
+                </li>
+                <li>
+                    <a href="#contact"
+                        class="text-lg font-semibold bg-orange text-black px-6 py-2 rounded hover:bg-yellow-500">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <div class="hidden bg-white text-black w-full" id="mobile-menu">
+            <ul class="p-4 space-y-2 text-center gap-5">
+                <li>
+                    <a href="#work" class="text-lg font-semibold">Our Work</a>
+                </li>
+                <li>
+                    <a href="#about" class="text-lg font-semibold">About</a>
+                </li>
+                <li>
+                    <a href="#news" class="text-lg font-semibold">News</a>
+                </li>
+                <li>
+                    <a href="#teams" class="text-lg font-semibold">Team</a>
+                </li>
+                <li>
+                    <a href="#contact"
+                        class="text-lg font-semibold bg-orange text-black px-6 py-3 rounded hover:bg-yellow-500">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="px-4 py-8 lg:px-36 mx-auto">
+        <!-- Gallery Title -->
+        <div class="my-8">
+            <div class="flex items-center mb-4">
+                <h1 class="text-white text-4xl sm:text-6xl ml-4 heading">GALLERY</h1>
+            </div>
+            <!-- Discover Button -->
+            <div class="flex justify-between">
+                <div></div> <!-- Empty div to push the button to the right -->
+                <a href="#gallery"
+                    class="hidden md:block bg-orange text-black px-6 py-2 font-bold hover:bg-yellow-500">Discover Our
+                    Gallery</a>
+            </div>
+        </div>
+        <!-- Mini Nav -->
+        <div class="flex items-center text-white py-4 ">
+            <div class="flex items-center space-x-2">
+                <a href="#hill" class="hover:underline">Hill</a>
+                <span>|</span>
+                <a href="#ironworks" class="hover:underline">Ironworks</a>
+                <span>|</span>
+                <a href="#cambridge" class="hover:underline">Cambridge</a>
+            </div>
+            <span class="text-yellow-500 ml-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </span>
+        </div>
+
+        <!-- Gallery -->
+        <section id="gallery" class="grid grid-cols-1 lg:grid-cols-4 gap-4">
+            <!-- Column 1 -->
+            <div class="col-span-1 grid gap-4">
+                <div class="overflow-hidden">
+                    <img src="./src/images/lion.jpeg" alt="lion" class="w-full h-64 object-cover">
+                </div>
+                <div class="overflow-hidden">
+                    <img src="./src/images/flamingo.jpeg" alt="flamingo" class="w-full h-64 object-cover">
+                </div>
+            </div>
+            <!-- Column 2 -->
+            <div class="md:col-span-2 row-span-2 overflow-hidden">
+                <img src="./src/images/elephant.jpeg" alt="elephant" class="w-full h-64 md:h-full object-cover object-left">
+            </div>
+            <!-- Column 3 -->
+            <div class="col-span-1 row-span-2 overflow-hidden">
+                <img src="./src/images/giraffe.jpeg" alt="giraffe"
+                    class="w-full h-full object-cover object-[right_20%]">
+            </div>
         </section>
-        <section class="gallery grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="mb-4">
-                <img src="path/to/gallery-image1.jpg" alt="Gallery Image 1" class="w-full h-auto">
-            </div>
-            <div class="mb-4">
-                <img src="path/to/gallery-image2.jpg" alt="Gallery Image 2" class="w-full h-auto">
-            </div>
-            <div class="mb-4">
-                <img src="path/to/gallery-image3.jpg" alt="Gallery Image 3" class="w-full h-auto">
-            </div>
-            <div class="mb-4">
-                <img src="path/to/gallery-image4.jpg" alt="Gallery Image 4" class="w-full h-auto">
-            </div>
-        </section>
+
+        <!-- Discover Button for Mobile -->
+        <div class="md:hidden text-right my-8">
+            <a href="#gallery" class="bg-orange text-black px-6 py-2 font-bold hover:bg-yellow-500">Discover Our
+                Gallery</a>
+        </div>
     </main>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', () => {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // when the Discover button is clicked send an alert
+        document.querySelector('.font-bold').addEventListener('click', () => {
+            alert('Discover Our Gallery');
+        });
+    </script>
 </body>
-</html>
 
 </html>

@@ -1,8 +1,8 @@
-# Eye Candy Design Web Developer Trial
+# iCandy Design Web Developer Trial
 
 ## Project Overview
 
-This project is a responsive web page created as part of a technical trial for a web developer position at Eye Candy Design. The task was to replicate a provided visual design using HTML and Tailwind CSS, ensuring both desktop and mobile responsiveness.
+This project is a responsive web page created as part of a technical trial for a web developer position at iCandy Design. The task was to replicate a provided visual design using HTML and Tailwind CSS, ensuring both desktop and mobile responsiveness.
 
 ## Technologies Used
 
@@ -59,7 +59,7 @@ npm install
 Run the following command to build the Tailwind CSS:
 
 ```bash
-npx tailwindcss -i ./src/styles/styles.css -o ./dist/output.css --watch
+npm run build
 ```
 
 ### Viewing the Project
