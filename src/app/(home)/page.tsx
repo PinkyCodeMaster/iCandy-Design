@@ -1,3 +1,4 @@
+// app/page.js
 import Image from "next/image";
 
 export default function Home() {
@@ -46,26 +47,18 @@ export default function Home() {
       </div>
       <section id="gallery" className="grid grid-cols-1 lg:grid-cols-4 gap-4">
         <div className="col-span-1 grid gap-4">
-          <div className="overflow-hidden">
-            <div className="relative w-full h-64">
-              <Image src="/lion.jpeg" alt="lion" layout="fill" objectFit="cover" />
-            </div>
+          <div className="relative w-full h-64 overflow-hidden">
+            <Image src="/lion.jpeg" alt="lion" layout="fill" objectFit="cover" />
           </div>
-          <div className="overflow-hidden">
-            <div className="relative w-full h-64">
-              <Image src="/flamingo.jpeg" alt="flamingo" layout="fill" objectFit="cover" />
-            </div>
+          <div className="relative w-full h-64 overflow-hidden">
+            <Image src="/flamingo.jpeg" alt="flamingo" layout="fill" objectFit="cover" />
           </div>
         </div>
-        <div className="md:col-span-2 row-span-2 overflow-hidden">
-          <div className="relative w-full h-64 md:h-full">
-            <Image src="/elephant.jpeg" alt="elephant" layout="fill" objectFit="cover" objectPosition="left" />
-          </div>
+        <div className="relative md:col-span-2 row-span-2 w-full h-64 md:h-full overflow-hidden">
+          <Image src="/elephant.jpeg" alt="elephant" layout="fill" objectFit="cover" objectPosition="left" />
         </div>
-        <div className="col-span-1 row-span-2 overflow-hidden">
-          <div className="relative w-full h-full">
-            <Image className="w-full h-full object-[right_20%]" src="/giraffe.jpeg" alt="giraffe" layout="fill" objectFit="cover" objectPosition="right 20%" />
-          </div>
+        <div className="relative col-span-1 row-span-2 w-full h-64 md:h-full overflow-hidden">
+          <Image className="w-full h-full object-[right_20%]" src="/giraffe.jpeg" alt="giraffe" layout="fill" objectFit="cover" objectPosition="right 20%" />
         </div>
       </section>
       <div className="md:hidden text-right my-8">
